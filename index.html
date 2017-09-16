@@ -9,6 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="/style/main.css" rel="stylesheet" />
+    
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link rel="stylesheet" href="/style/daterangepicker.css">
+
+
 </head>
 
 <body>
@@ -47,9 +56,20 @@
                     </div>
                 </div>
             </div>
-            <div class="top-line">
-                <div class="container">
+            <div class="top-line flex flex-vertical">
+                <div class="container flex flex-between flex-vertical flex-wrap">
                     <h1>Общие показатели</h1>
+                    <div class="flex flex-vertical">
+                        <div class="switch">
+                            <span>месяц</span>
+                            <span>квартал</span>
+                            <span>год</span>
+                        </div>
+                        <input type="text" id="calendar" class="calendar" name="daterange">
+                        <div class="filter text-center">
+                            <span>Доступные фильтры</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,6 +79,11 @@
             </div>
         </div>
     </div>
+    
+    <script>
+    $('input[name="daterange"]').daterangepicker();
+    </script>
+    
 </body>
 
 </html>

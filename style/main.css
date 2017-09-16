@@ -63,6 +63,7 @@ p {
 
 h1 {
     font-size: 26px;
+    margin: 0;
 }
 
 a {
@@ -78,17 +79,21 @@ a:active {}
 
 .container {
     max-width: 1360px;
-    min-width: 780px;
-    width: 70vw;
-    margin-left: calc(50% - 70vw/2);
+    min-width: 700px;
+    width: 80vw;
+    margin-left: calc(50% - 80vw/2);
     -webkit-transition-property: margin-left;
         -moz-transition-property: margin-left;
         -o-transition-property: margin-left;
         transition-property: margin-left;
-        -webkit-transition-duration: .5s;
-        -moz-transition-duration: .5s;
-        -o-transition-duration: .5s;
-        transition-duration: .5s;
+        -webkit-transition-duration: .4s;
+        -moz-transition-duration: .4s;
+        -o-transition-duration: .4s;
+        transition-duration: .4s;
+}
+
+.text-center {
+    text-align: center;
 }
 
 
@@ -112,6 +117,10 @@ a:active {}
 
 .flex-vertical {
     align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 
@@ -239,9 +248,26 @@ a:active {}
     top: -10px;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1960px) {
     .hidden-menu-ticker:checked~.content .container {
         margin-left: 270px;
+    }
+}
+
+@media screen and (min-width: 1960px) {
+    .container {
+        margin-left: calc(50% - 1360px/2);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .hidden-menu-ticker~.content .container {
+        width: 95%;
+        margin-left: 2%;
+    }
+    
+    .hidden-menu-ticker:checked~.content .container {
+        margin-left: 2%;
     }
 }
 
@@ -314,9 +340,58 @@ a:active {}
     background-position: center center;
 }
 
-/*-----------Общие стили----------*/
+/*-----------TOP-LINE стили----------*/
 
 .top-line {
     background-color: #fff;
     border-bottom: #e8e8e8 1px solid;
+    min-height: 70px;
+}
+
+.switch {
+    margin-right: 20px;
+}
+
+.switch span {
+    color: #808080;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-right: #d0d0d0 1px solid;
+    cursor: pointer;
+    -webkit-transition: color 200ms;
+    transition: color 200ms;
+}
+
+.switch span:hover {
+    color: #4c4a4a;
+}
+
+.switch span:last-child {
+    border-right: none;
+}
+
+input.calendar {
+    border: #dcdcdc 1px solid;
+    border-radius: 3px;
+    padding: 7px;
+    margin-right: 20px;
+    color: #808080;
+    padding-right: 45px;
+    background-image: url('/img/calendar.png');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: contain;
+    box-shadow: 0 0px 2px 1px #dedcdc;
+}
+
+.filter {
+    width: 300px;
+    height: 70px;
+    border-left: #d0d0d0 1px solid;
+}
+
+
+.white-block {
+    background-color: #fff;
+    border: #e8e8e8 1px solid;
 }
