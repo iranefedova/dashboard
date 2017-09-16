@@ -1,0 +1,70 @@
+/*-----------Подключение шрифтов----------*/
+
+@font-face {
+	font-family: 'Myriad Pro Regular';
+	src: url('/fonts/MyriadPro/MyriadPro-Regular.eot');
+	src: url('/fonts/MyriadPro/MyriadPro-Regular.eot?#iefix')format('embedded-opentype'),
+	url('/fonts/MyriadPro/MyriadPro-Regular.woff') format('woff'),
+	url('/fonts/MyriadPro/MyriadPro-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro Bold';
+	src: url('/fonts/MyriadProBold/MyriadPro-Bold.eot');
+	src: url('/fonts/MyriadProBold/MyriadPro-Bold.eot?#iefix')format('embedded-opentype'),
+	url('/fonts/MyriadProBold/MyriadPro-Bold.woff') format('woff'),
+	url('/fonts/MyriadProBold/MyriadPro-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    font: 0.9em/20px 'Myriad Pro Regular', Arial, sans-serif;
+    background: #f2f2f2;
+    color: #272a33;
+}
+
+img,embed,object,video {
+    max-width: 100%;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+input,textarea,select,button {
+    outline: none;
+    resize: none;
+}
+
+h1 {
+
+}
+
+a {
+    color: #007dd5;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #007dd5;
+    text-decoration: none !important;
+}
