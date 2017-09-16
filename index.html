@@ -12,41 +12,47 @@
 </head>
 
 <body>
-    <div class="page flex flex-column flex-between">
-        <div class="box-content">
-            <input type="checkbox" checked="checked" id="hmt" class="hidden-menu-ticker">
-            <label class="btn-menu" for="hmt">
+    <input type="checkbox" checked="checked" id="hmt" class="hidden-menu-ticker">
+    <label class="btn-menu" for="hmt">
               <span class="first"></span>
               <span class="second"></span>
               <span class="third"></span>
             </label>
-            <ul class="hidden-menu">
-               <li class="flex flex-vertical"><p>Доставка</p></li>
-                <li><a href="#">Общие результаты</a></li>
-                <li><a href="#">Динамика</a></li>
-                <li><a href="#">Сравнение магазинов</a></li>
-                <li><a href="#">Комментарии</a></li>
-                <li><a href="#">Карта рейтинга</a></li>
-            </ul>
+    <ul class="hidden-menu">
+        <li class="flex flex-vertical">
+            <p>Доставка</p>
+        </li>
+        <li><a href="#">Общие результаты</a></li>
+        <li><a href="#">Динамика</a></li>
+        <li><a href="#">Сравнение магазинов</a></li>
+        <li><a href="#">Комментарии</a></li>
+        <li><a href="#">Карта рейтинга</a></li>
+    </ul>
 
-            <div class="content">
-
-                <div class="header">
-                    <div class="container">
-                        <div class="flex flex-end">
-                            <input type="radio" id="contractor" name="header-type">
-                            <label for="contractor">Подрядчик</label>
-                            <input type="radio" id="shop" name="header-type">
-                            <label for="shop">Магазин</label>
-                            <select name="header-select" id="header-select">
-                                <option value="">Выбор магазина</option>
-                            </select>
+    <div class="content flex flex-column flex-between">
+        <div class="page-content">
+            <div class="header">
+                <div class="container flex flex-end flex-vertical">
+                    <div class="toggle flex flex-vertical">
+                        <input type="radio" id="contractor" name="header-type">
+                        <label for="contractor">Подрядчик</label>
+                        <input type="radio" id="shop" name="header-type" checked>
+                        <label for="shop">Магазин</label>
+                        <div class="selector">
+                            <select name="header-select" id="header-select" class="select">
+                                    <option value="">Выбор магазина</option>
+                                </select>
+                            <div class="select-arrow"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="top-line">
+                <div class="container">
+                    <h1>Общие показатели</h1>
+                </div>
+            </div>
         </div>
-
         <div class="footer big-marg-t">
             <div class="container">
                 footer
