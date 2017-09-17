@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="/style/main.css" rel="stylesheet" />
-    
+
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <link rel="stylesheet" href="/style/daterangepicker.css">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
 
 
 </head>
@@ -26,7 +27,7 @@
               <span class="first"></span>
               <span class="second"></span>
               <span class="third"></span>
-            </label>
+    </label>
     <ul class="hidden-menu">
         <li class="flex flex-vertical">
             <p>Доставка</p>
@@ -50,7 +51,7 @@
                         <div class="selector">
                             <select name="header-select" id="header-select" class="select">
                                     <option value="">Выбор магазина</option>
-                                </select>
+                            </select>
                             <div class="select-arrow"></div>
                         </div>
                     </div>
@@ -66,8 +67,115 @@
                             <span>год</span>
                         </div>
                         <input type="text" id="calendar" class="calendar" name="daterange">
-                        <div class="filter text-center">
-                            <span>Доступные фильтры</span>
+                        <div class="filter flex-center flex flex-vertical">
+                            <span>Доступные фильтры <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container flex">
+                <div class="main-content">
+                    <div class="white-block flex flex-between">
+                        <h3 class="flex-self-vertical">Рейтинг</h3>
+                        <div class="flex flex-column flex-center border-block">
+                            <p class="big-text">580</p>
+                            <p class="middle-text grey-text">550</p>
+                        </div>
+                        <div class="flex">
+                            <div class="good flex flex-vertical flex-between">
+                                <span>34</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <button class="graphic"></button>
+                        </div>
+                    </div>
+                    <div class="hidden-graphic text-center"><img src="./img/gr1.png"></div>
+                    <div class="white-block flex flex-between">
+                        <h3 class="flex-self-vertical">Общая удовлетворённость</h3>
+                        <div class="flex flex-column flex-center border-block">
+                            <p class="big-text">580</p>
+                            <p class="middle-text grey-text">550</p>
+                        </div>
+                        <div class="flex">
+                            <div class="bad flex flex-vertical flex-between">
+                                <span>34</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <button class="graphic"></button>
+                        </div>
+                    </div>
+                    <div class="white-block flex flex-between">
+                        <h3 class="flex-self-vertical">Общая удовлетворённость</h3>
+                        <div class="flex flex-column flex-center border-block">
+                            <p class="big-text">580</p>
+                            <p class="middle-text grey-text">550</p>
+                        </div>
+                        <div class="flex">
+                            <div class="good flex flex-vertical flex-between">
+                                <span>34</span>
+                                <div class="arrow"></div>
+                            </div>
+                            <button class="graphic"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-filters">
+                    <div class="filter-header"><span>Критерий</span></div>
+                    <div class="filter-block">
+                        <div class="marg-b">
+                            <input type="checkbox" id="select-all" class="select-all checkbox">
+                            <label for="select-all"><span></span>(Выбрать все)</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox1" class="checkbox">
+                            <label for="checkbox1"><span></span>Удовлетворённость</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox2" class="checkbox">
+                            <label for="checkbox2"><span></span>NPS</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox3" class="checkbox">
+                            <label for="checkbox3"><span></span>Звонок за час</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox4" class="checkbox">
+                            <label for="checkbox4"><span></span>Комплектность заказа</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox5" class="checkbox">
+                            <label for="checkbox5"><span></span>Товар без повреждений</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox6" class="checkbox">
+                            <label for="checkbox6"><span></span>Доставка до оговоренного места</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox7" class="checkbox">
+                            <label for="checkbox7"><span></span>Вежливость сотрудников</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox8" class="checkbox">
+                            <label for="checkbox8"><span></span>Время на проверку</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox9" class="checkbox">
+                            <label for="checkbox9"><span></span>Отсутствие доплаты</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="checkbox" id="checkbox10" class="checkbox">
+                            <label for="checkbox10"><span></span>Количество доставок</label>
+                        </div>
+                    </div>
+                    <div class="filter-header"><span>Тип рейтинга</span></div>
+                    <div class="filter-block">
+                        <div class="marg-b">
+                            <input type="radio" class="radio" id="radio" name="filter-radio" checked />
+                            <label for="radio">Мультивыбор</label>
+                        </div>
+                        <div class="marg-b">
+                            <input type="radio" class="radio" id="radio1" name="filter-radio" />
+                            <label for="radio1">Выбор 1 магазина</label>
                         </div>
                     </div>
                 </div>
@@ -75,15 +183,38 @@
         </div>
         <div class="footer big-marg-t">
             <div class="container">
-                footer
+                Coopyright, 2017
             </div>
         </div>
     </div>
-    
+
     <script>
-    $('input[name="daterange"]').daterangepicker();
+        $('input[name="daterange"]').daterangepicker();
     </script>
-    
+
+    <script>
+        $(document).ready(function() {
+            // выбрать все
+            $('#select-all').change(function() {
+                if ($(this).is(':checked')) {
+                    $('input.checkbox').attr('checked', true);
+                } else {
+                    $('input.checkbox').removeAttr('checked');
+                }
+            });
+            
+            $(".filter").click(function() {
+                if ($(".main-filters").is(":visible")) {
+                    $(".main-filters").slideUp("slow");
+                    $(".main-content").addClass("content-100");
+                } else {
+                    $(".main-filters").slideDown("slow");
+                    $(".main-content").removeClass("content-100");
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
