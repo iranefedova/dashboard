@@ -140,12 +140,20 @@ a:active {}
     align-items: center;
 }
 
+.flex-vertical-end {
+    align-items: flex-end;
+}
+
 .flex-self-vertical {
     align-self: center;
 }
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.flex-noshrink {
+    flex-shrink: 0;
 }
 
 
@@ -284,7 +292,7 @@ a:active {}
     list-style: none;
     margin: 0;
     position: absolute;
-    bottom: -85px;
+    bottom: -100px;
     left: 0;
     width: 225px;
     padding-left: 25px;
@@ -295,6 +303,9 @@ a:active {}
     color: #fff;
     font-size: 16px;
     transition: color .1s;
+    display: block;
+    padding-top: 4px;
+    line-height: 25px;
 }
 
 .submenu li a:hover {
@@ -352,6 +363,7 @@ a:active {}
     border: #36a484 2px solid;
     box-shadow: 0 0px 2px 1px #999;
     border-radius: 3px;
+    width: 300px;
 }
 
 .selector>select {
@@ -362,6 +374,8 @@ a:active {}
     border: none;
     cursor: pointer;
     padding-right: 50px;
+    width: 100%;
+    background: #fff;
 }
 
 .selector>.select-arrow {
@@ -410,6 +424,11 @@ a:active {}
     border-right: none;
 }
 
+.switch span.active {
+    color: #4ab597;
+    cursor: default;
+}
+
 input.calendar {
     border: #dcdcdc 1px solid;
     border-radius: 3px;
@@ -435,6 +454,10 @@ input.calendar {
 
 
 /*-----------Main content стили----------*/
+
+.help-text p {
+    color: #859098;
+}
 
 .white-block {
     background-color: #fafafa;
@@ -496,20 +519,20 @@ button.graphic {
 .good,
 .bad {
     min-width: 110px;
-    font-size: 20px;
+    font-size: 24px;
     padding: 15px;
 }
 
 .good {
     background-color: #d7f9f0;
-    border: #8dd6c2 1px solid;
-    color: #6ec7af;
+    border: #4ab597 1px solid;
+    color: #4ab597;
 }
 
 .bad {
-    background-color: #fde2db;
-    border: #fccfbd 1px solid;
-    color: #d98169;
+    background-color: #f7e2e9;
+    border: #c87089 1px solid;
+    color: #c87089;
 }
 
 .bad .arrow {

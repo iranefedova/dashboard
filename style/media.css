@@ -1,27 +1,11 @@
 @media screen and (max-width: 1960px) {
+    
     .hidden-menu-ticker:checked~.content .container {
         margin-left: 270px;
     }
 }
 
-@media screen and (min-width: 1960px) {
-    .container {
-        margin-left: calc(50% - 1360px/2);
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .hidden-menu-ticker~.content .container {
-        width: 95%;
-        margin-left: 2%;
-    }
-    .hidden-menu-ticker:checked~.content .container {
-        margin-left: 2%;
-    }
-}
-
-@media screen and (max-width: 1060px) {
-
+@media screen and (max-width: 1445px) {
     .top-line > .container > div {
         flex-basis: 100%;
         justify-content: space-between;
@@ -32,16 +16,16 @@
     }
     
     .switch span {
-        font-size: 16px;
-        padding: 5px;
+        font-size: 18px;
+        padding: 6px;
     }
     
-    input.calendar {
-        max-width: 110px;
+    .filter {
+        border-left: none;
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
 
     .white-block .border-block {
         flex-basis: 12%;
