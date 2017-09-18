@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="/style/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style/media.css">
 
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
@@ -29,8 +30,14 @@
               <span class="third"></span>
     </label>
     <ul class="hidden-menu">
-        <li class="flex flex-vertical">
-            <p>Доставка</p>
+        <li class="flex flex-vertical flex-wrap">
+           <input type="checkbox" id="hidden-submenu-ticker" class="hidden-submenu-ticker">
+            <label for="hidden-submenu-ticker">Доставка <i class="fa fa-angle-down" aria-hidden="true"></i></label>
+            <ul class="submenu">
+                <li><a href="#">Подпункт 1</a></li>
+                <li><a href="#">Подпункт 2</a></li>
+                <li><a href="#">Подпункт 3</a></li>
+            </ul>
         </li>
         <li><a href="#">Общие результаты</a></li>
         <li><a href="#">Динамика</a></li>
@@ -45,9 +52,9 @@
                 <div class="container flex flex-end flex-vertical">
                     <div class="toggle flex flex-vertical">
                         <input type="radio" id="contractor" name="header-type">
-                        <label for="contractor">Подрядчик</label>
+                        <label for="contractor" class="light">Подрядчик</label>
                         <input type="radio" id="shop" name="header-type" checked>
-                        <label for="shop">Магазин</label>
+                        <label for="shop" class="light">Магазин</label>
                         <div class="selector">
                             <select name="header-select" id="header-select" class="select">
                                     <option value="">Выбор магазина</option>
@@ -76,7 +83,7 @@
             <div class="container flex">
                 <div class="main-content">
                     <div class="white-block flex flex-between">
-                        <h3 class="flex-self-vertical">Рейтинг</h3>
+                        <h3 class="flex-self-vertical light">Рейтинг</h3>
                         <div class="flex flex-column flex-center border-block">
                             <p class="big-text">580</p>
                             <p class="middle-text grey-text">550</p>
@@ -91,7 +98,7 @@
                     </div>
                     <div class="hidden-graphic text-center"><img src="./img/gr1.png"></div>
                     <div class="white-block flex flex-between">
-                        <h3 class="flex-self-vertical">Общая удовлетворённость</h3>
+                        <h3 class="flex-self-vertical light">Общая удовлетворённость</h3>
                         <div class="flex flex-column flex-center border-block">
                             <p class="big-text">580</p>
                             <p class="middle-text grey-text">550</p>
@@ -105,7 +112,7 @@
                         </div>
                     </div>
                     <div class="white-block flex flex-between">
-                        <h3 class="flex-self-vertical">Общая удовлетворённость</h3>
+                        <h3 class="flex-self-vertical light">Общая удовлетворённость</h3>
                         <div class="flex flex-column flex-center border-block">
                             <p class="big-text">580</p>
                             <p class="middle-text grey-text">550</p>
@@ -189,7 +196,37 @@
     </div>
 
     <script>
-        $('input[name="daterange"]').daterangepicker();
+        $('input[name="daterange"]').daterangepicker({
+            locale: {
+                format: 'DD-MM-YYYY',
+                "applyLabel": "Применить",
+                "cancelLabel": "Отмена",
+                "daysOfWeek": [
+                    "Вс",
+                    "Пн",
+                    "Вт",
+                    "Ср",
+                    "Чт",
+                    "Пт",
+                    "Сб"
+                ],
+                "monthNames": [
+                    "Январь",
+                    "Февраль",
+                    "Март",
+                    "Апрель",
+                    "Май",
+                    "Июнь",
+                    "Июль",
+                    "Aвгуст",
+                    "Сентябрь",
+                    "Октябрь",
+                    "Ноябрь",
+                    "Декабрь"
+                ],
+                "firstDay": 1
+            }
+        });
     </script>
 
     <script>
